@@ -112,3 +112,15 @@ InitTestScene*.unity*
 
 # Auto-generated cache in Assets folder
 /[Aa]ssets/[Ss]ceneDependencyCache*
+/.idea
+Assets/Resources/PerformanceTestRunSettings.json.meta
+Assets/Resources/PerformanceTestRunSettings.json
+Assets/Resources/PerformanceTestRunInfo.json.meta
+Assets/Resources/PerformanceTestRunInfo.json
+/webgl_build
+/pc_build
+pc_build.zip
+mac_build.zip
+/androidBuild
+/linux_build
+linux_build.zip
