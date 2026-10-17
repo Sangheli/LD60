@@ -189,4 +189,29 @@ public class AnimatorController : MonoBehaviour
         view.localScale = startScale;
         _started[view] = null;
     }
+    
+    public void PlayRotate(Transform view, AnimationSettings settings)
+    {
+        _started.TryAdd(view, null);
+        
+        if (_started[view] != null)
+        {
+            StopCoroutine(_started[view]);
+        }
+        
+        _started[view] = PlayRotateAnimationIEnumerator(view,settings);
+        StartCoroutine(_started[view]);
+    }
+    
+    IEnumerator PlayRotateAnimationIEnumerator(Transform view,AnimationSettings settings)
+    {
+        while (view!=null)
+        {
+            var newPos = view.localRotation * Quaternion.Euler(settings.ShiftV3);
+            view.localRotation = newPos;
+            yield return new WaitForSeconds(settings.Time/settings.StepCount);
+        }
+
+        _started[view] = null;
+    }
 }
