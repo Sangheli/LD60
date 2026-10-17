@@ -7,7 +7,7 @@ public class PlayerView : MonoBehaviour
     public Context context;
     public KeyboardInput keyboardInput = new();
     private IPlayerInput _playerInput = new PlayerInputHuman();
-    public SaveData saveData = new();
+    public SaveData saveData;
     public AbilityView currentAbility;
 
     private void Awake()

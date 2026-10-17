@@ -9,6 +9,8 @@ public class Context : MonoBehaviour
     public PrefabSpawner spawner;
     public AnimatorController animatorController;
     public DataController dataController = new DataController();
+    public MapView mapView;
+    public PlayerView playerView;
     
     private void OnValidate()
     {

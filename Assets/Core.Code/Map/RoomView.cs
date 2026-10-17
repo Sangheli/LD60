@@ -8,6 +8,12 @@ public class RoomView : MonoBehaviour
     public List<DoorView> doors;
     
     public List<GameObject> toSearchOnAwake;
+
+
+    public RoomView roomUp;
+    public RoomView roomDown;
+    public RoomView roomLeft;
+    public RoomView roomRight;
     
     private void Awake()
     {

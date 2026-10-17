@@ -152,9 +152,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 1e8c875929ead564182cc18b7154baed, type: 2}
     - target: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+      propertyPath: roomUp
+      value: 
+      objectReference: {fileID: 1051934086}
+    - target: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
       propertyPath: context
       value: 
       objectReference: {fileID: 863280418}
+    - target: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+      propertyPath: roomLeft
+      value: 
+      objectReference: {fileID: 1660970203}
+    - target: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+      propertyPath: roomRight
+      value: 
+      objectReference: {fileID: 1672820811}
     - target: {fileID: 1338829306230856419, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -145
@@ -358,9 +370,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 1e8c875929ead564182cc18b7154baed, type: 2}
     - target: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+      propertyPath: roomUp
+      value: 
+      objectReference: {fileID: 658592336}
+    - target: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
       propertyPath: context
       value: 
       objectReference: {fileID: 863280418}
+    - target: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+      propertyPath: roomDown
+      value: 
+      objectReference: {fileID: 1660970203}
+    - target: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+      propertyPath: roomRight
+      value: 
+      objectReference: {fileID: 1051934086}
     - target: {fileID: 1338829306230856419, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -219.8
@@ -678,6 +702,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 325272884}
+  - component: {fileID: 325272885}
   m_Layer: 0
   m_Name: Scene
   m_TagString: Untagged
@@ -714,6 +739,32 @@ Transform:
   - {fileID: 1660970202}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &325272885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325272883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fa49d9d4f444d5f96cc4c6e236761f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MapView
+  context: {fileID: 863280418}
+  rooms:
+  - {fileID: 1491241493}
+  - {fileID: 1448253961}
+  - {fileID: 528146167}
+  - {fileID: 1459433420}
+  - {fileID: 1473847853}
+  - {fileID: 1672820811}
+  - {fileID: 1051934086}
+  - {fileID: 2133475275}
+  - {fileID: 1920919978}
+  - {fileID: 973193535}
+  - {fileID: 658592336}
+  - {fileID: 1660970203}
 --- !u!1001 &359492187
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -750,6 +801,18 @@ PrefabInstance:
       propertyPath: context
       value: 
       objectReference: {fileID: 863280418}
+    - target: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+      propertyPath: roomDown
+      value: 
+      objectReference: {fileID: 1459433420}
+    - target: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+      propertyPath: roomLeft
+      value: 
+      objectReference: {fileID: 2133475275}
+    - target: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+      propertyPath: roomRight
+      value: 
+      objectReference: {fileID: 1448253961}
     - target: {fileID: 1338829306230856419, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -71
@@ -953,9 +1016,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 2ab7e2d5ff1db4147af31c8e7601ae09, type: 2}
     - target: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+      propertyPath: roomUp
+      value: 
+      objectReference: {fileID: 1491241493}
+    - target: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
       propertyPath: context
       value: 
       objectReference: {fileID: 863280418}
+    - target: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+      propertyPath: roomLeft
+      value: 
+      objectReference: {fileID: 1672820811}
     - target: {fileID: 1338829306230856419, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1126,6 +1197,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1338829306230856419, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
   m_PrefabInstance: {fileID: 485461667}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &528146167 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+  m_PrefabInstance: {fileID: 485461667}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 919e3974728c423c93cbc25abae82730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoomView
 --- !u!1 &571187022 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
@@ -1136,6 +1218,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1338829306230856419, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
   m_PrefabInstance: {fileID: 2147457289}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &658592336 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+  m_PrefabInstance: {fileID: 2147457289}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 919e3974728c423c93cbc25abae82730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoomView
 --- !u!1001 &781479214
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1265,6 +1358,8 @@ MonoBehaviour:
   content: {fileID: 11400000, guid: 4d3063edc2f296540b6dbb1d9481fbe2, type: 2}
   spawner: {fileID: 863280417}
   animatorController: {fileID: 863280420}
+  mapView: {fileID: 325272885}
+  playerView: {fileID: 1605767049}
 --- !u!114 &863280419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1325,9 +1420,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 49082fe40c424934094ee04ae9a2366b, type: 2}
     - target: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+      propertyPath: roomUp
+      value: 
+      objectReference: {fileID: 973193535}
+    - target: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
       propertyPath: context
       value: 
       objectReference: {fileID: 863280418}
+    - target: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+      propertyPath: roomRight
+      value: 
+      objectReference: {fileID: 1920919978}
     - target: {fileID: 1338829306230856419, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -219.8
@@ -1493,6 +1596,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+--- !u!114 &973193535 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+  m_PrefabInstance: {fileID: 66460703}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 919e3974728c423c93cbc25abae82730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoomView
 --- !u!1001 &999807816
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1526,9 +1640,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 49082fe40c424934094ee04ae9a2366b, type: 2}
     - target: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+      propertyPath: roomUp
+      value: 
+      objectReference: {fileID: 1473847853}
+    - target: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
       propertyPath: context
       value: 
       objectReference: {fileID: 863280418}
+    - target: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+      propertyPath: roomDown
+      value: 
+      objectReference: {fileID: 1672820811}
+    - target: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+      propertyPath: roomLeft
+      value: 
+      objectReference: {fileID: 1051934086}
+    - target: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+      propertyPath: roomRight
+      value: 
+      objectReference: {fileID: 1491241493}
     - target: {fileID: 1338829306230856419, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -71
@@ -1732,9 +1862,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 2ab7e2d5ff1db4147af31c8e7601ae09, type: 2}
     - target: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+      propertyPath: roomUp
+      value: 
+      objectReference: {fileID: 2133475275}
+    - target: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
       propertyPath: context
       value: 
       objectReference: {fileID: 863280418}
+    - target: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+      propertyPath: roomDown
+      value: 
+      objectReference: {fileID: 1920919978}
+    - target: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+      propertyPath: roomLeft
+      value: 
+      objectReference: {fileID: 973193535}
+    - target: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+      propertyPath: roomRight
+      value: 
+      objectReference: {fileID: 1459433420}
     - target: {fileID: 1338829306230856419, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -145
@@ -1905,6 +2051,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1338829306230856419, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
   m_PrefabInstance: {fileID: 1051934084}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1051934086 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+  m_PrefabInstance: {fileID: 1051934084}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 919e3974728c423c93cbc25abae82730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoomView
 --- !u!1 &1082299636 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1196662182587189344, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
@@ -1988,6 +2145,14 @@ PrefabInstance:
       propertyPath: context
       value: 
       objectReference: {fileID: 863280418}
+    - target: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+      propertyPath: roomDown
+      value: 
+      objectReference: {fileID: 1491241493}
+    - target: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+      propertyPath: roomLeft
+      value: 
+      objectReference: {fileID: 1473847853}
     - target: {fileID: 1338829306230856419, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2158,11 +2323,55 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1338829306230856419, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
   m_PrefabInstance: {fileID: 1448253959}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1448253961 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+  m_PrefabInstance: {fileID: 1448253959}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 919e3974728c423c93cbc25abae82730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoomView
+--- !u!114 &1459433420 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+  m_PrefabInstance: {fileID: 999807816}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 919e3974728c423c93cbc25abae82730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoomView
+--- !u!114 &1473847853 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+  m_PrefabInstance: {fileID: 359492187}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 919e3974728c423c93cbc25abae82730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoomView
 --- !u!4 &1491241492 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1338829306230856419, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
   m_PrefabInstance: {fileID: 972292287141823989}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1491241493 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+  m_PrefabInstance: {fileID: 972292287141823989}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 919e3974728c423c93cbc25abae82730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoomView
 --- !u!1 &1605767047
 GameObject:
   m_ObjectHideFlags: 0
@@ -2209,6 +2418,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerView
   context: {fileID: 863280418}
+  saveData:
+    abilities: []
+    isAlive: 1
+    currentRoom: {fileID: 1491241493}
   currentAbility: {fileID: 1386446231}
 --- !u!1001 &1635313969
 PrefabInstance:
@@ -2358,6 +2571,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1338829306230856419, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
   m_PrefabInstance: {fileID: 866237999}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1660970203 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+  m_PrefabInstance: {fileID: 866237999}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 919e3974728c423c93cbc25abae82730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoomView
 --- !u!1001 &1672820809
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2391,9 +2615,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: e7e8d9949855ff6408d04b394c0e1637, type: 2}
     - target: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+      propertyPath: roomUp
+      value: 
+      objectReference: {fileID: 1459433420}
+    - target: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
       propertyPath: context
       value: 
       objectReference: {fileID: 863280418}
+    - target: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+      propertyPath: roomLeft
+      value: 
+      objectReference: {fileID: 1920919978}
+    - target: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+      propertyPath: roomRight
+      value: 
+      objectReference: {fileID: 528146167}
     - target: {fileID: 1338829306230856419, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -71
@@ -2564,6 +2800,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1338829306230856419, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
   m_PrefabInstance: {fileID: 1672820809}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1672820811 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+  m_PrefabInstance: {fileID: 1672820809}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 919e3974728c423c93cbc25abae82730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoomView
 --- !u!1 &1850432532
 GameObject:
   m_ObjectHideFlags: 0
@@ -2661,6 +2908,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 325272884}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &1920919978 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+  m_PrefabInstance: {fileID: 11456532}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 919e3974728c423c93cbc25abae82730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoomView
 --- !u!21 &2044090952
 Material:
   serializedVersion: 8
@@ -2814,6 +3072,18 @@ PrefabInstance:
       propertyPath: context
       value: 
       objectReference: {fileID: 863280418}
+    - target: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+      propertyPath: roomDown
+      value: 
+      objectReference: {fileID: 1051934086}
+    - target: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+      propertyPath: roomLeft
+      value: 
+      objectReference: {fileID: 658592336}
+    - target: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+      propertyPath: roomRight
+      value: 
+      objectReference: {fileID: 1473847853}
     - target: {fileID: 1338829306230856419, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -145
@@ -2984,6 +3254,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1338829306230856419, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
   m_PrefabInstance: {fileID: 2133475273}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2133475275 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+  m_PrefabInstance: {fileID: 2133475273}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 919e3974728c423c93cbc25abae82730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoomView
 --- !u!1001 &2147457289
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3020,6 +3301,14 @@ PrefabInstance:
       propertyPath: context
       value: 
       objectReference: {fileID: 863280418}
+    - target: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+      propertyPath: roomDown
+      value: 
+      objectReference: {fileID: 973193535}
+    - target: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+      propertyPath: roomRight
+      value: 
+      objectReference: {fileID: 2133475275}
     - target: {fileID: 1338829306230856419, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -219.8
@@ -3326,9 +3615,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 863280418}
     - target: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+      propertyPath: roomUp
+      value: 
+      objectReference: {fileID: 1448253961}
+    - target: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
       propertyPath: context
       value: 
       objectReference: {fileID: 863280418}
+    - target: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+      propertyPath: roomDown
+      value: 
+      objectReference: {fileID: 528146167}
+    - target: {fileID: 1307081923255787567, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
+      propertyPath: roomLeft
+      value: 
+      objectReference: {fileID: 1459433420}
     - target: {fileID: 1338829306230856419, guid: 632ce70ca6d56a249abdcc97e66c91a1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

@@ -284,6 +284,10 @@ MonoBehaviour:
   - {fileID: 6322583284552119130}
   toSearchOnAwake:
   - {fileID: 425837063967123972}
+  roomUp: {fileID: 0}
+  roomDown: {fileID: 0}
+  roomLeft: {fileID: 0}
+  roomRight: {fileID: 0}
 --- !u!1 &3608976815174857678
 GameObject:
   m_ObjectHideFlags: 0
@@ -2877,7 +2881,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2186579523338712175, guid: cc5ed97edc6300641b722cdd695b9d2b, type: 3}
       propertyPath: m_Name
-      value: doorUp
+      value: doorLeft
       objectReference: {fileID: 0}
     - target: {fileID: 3716648631467447465, guid: cc5ed97edc6300641b722cdd695b9d2b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3942,7 +3946,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2186579523338712175, guid: cc5ed97edc6300641b722cdd695b9d2b, type: 3}
       propertyPath: m_Name
-      value: doorRight
+      value: doorDown
       objectReference: {fileID: 0}
     - target: {fileID: 3716648631467447465, guid: cc5ed97edc6300641b722cdd695b9d2b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5317,7 +5321,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2186579523338712175, guid: cc5ed97edc6300641b722cdd695b9d2b, type: 3}
       propertyPath: m_Name
-      value: doorDown
+      value: doorRight
       objectReference: {fileID: 0}
     - target: {fileID: 3716648631467447465, guid: cc5ed97edc6300641b722cdd695b9d2b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6444,7 +6448,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2186579523338712175, guid: cc5ed97edc6300641b722cdd695b9d2b, type: 3}
       propertyPath: m_Name
-      value: doorLeft
+      value: doorUp
       objectReference: {fileID: 0}
     - target: {fileID: 3716648631467447465, guid: cc5ed97edc6300641b722cdd695b9d2b, type: 3}
       propertyPath: m_LocalPosition.x
