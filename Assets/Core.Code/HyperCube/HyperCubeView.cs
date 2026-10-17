@@ -41,7 +41,7 @@ public class HyperCubeView : MonoBehaviour, ICollision
         {
             var spawnPos = transform.position + new Vector3(
                 UnityEngine.Random.Range(-data.spawnShift.x, data.spawnShift.x),
-                UnityEngine.Random.Range(0, data.spawnShift.y),
+                UnityEngine.Random.Range( data.spawnShift.y/2, data.spawnShift.y),
                 UnityEngine.Random.Range(-data.spawnShift.z, data.spawnShift.z)
             );
 
