@@ -3,4 +3,5 @@
 public class SaveData
 {
     public List<AbilityConfig> abilities;
+    public bool isAlive = true;
 }

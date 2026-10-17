@@ -449,6 +449,9 @@ PlayerSettings:
   - serializedVersion: 3
     m_BuildTarget: Android
     m_Formats: 03000000
+  - serializedVersion: 3
+    m_BuildTarget: WebGL
+    m_Formats: 05000000
   playModeTestRunnerEnabled: 0
   runPlayModeTestAsEditModeTest: 0
   actionOnDotNetUnhandledException: 1
@@ -728,7 +731,7 @@ PlayerSettings:
     QNX: UNITY_POST_PROCESSING_STACK_V2
     Standalone: SENTIS_ANALYTICS_ENABLED;APP_UI_EDITOR_ONLY;CROSS_PLATFORM_INPUT;UNITY_POST_PROCESSING_STACK_V2
     VisionOS: UNITY_POST_PROCESSING_STACK_V2
-    WebGL: SENTIS_ANALYTICS_ENABLED;UNITY_POST_PROCESSING_STACK_V2
+    WebGL: SENTIS_ANALYTICS_ENABLED;UNITY_POST_PROCESSING_STACK_V2;APP_UI_EDITOR_ONLY
     Windows Store Apps: MOBILE_INPUT
     XboxOne: UNITY_POST_PROCESSING_STACK_V2
     iPhone: CROSS_PLATFORM_INPUT;MOBILE_INPUT

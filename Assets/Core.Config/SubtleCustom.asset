@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SubtleCustom
   m_EditorClassIdentifier: 
   data:
-    pixelationAmount: 8
+    pixelationAmount: 4
     maxColorChannels:
       red: 0
       green: 0
@@ -42,4 +42,4 @@ MonoBehaviour:
       sizeMultiplier: 3.06
     innerMonitorShineRadius: -0.087
     innerMonitorShineCurve: 10
-  validationId: 67536fa2-2a1b-42d8-b4a7-76220fd033cb
+  validationId: e518d076-6d1b-47e3-a44f-71b51e2459a5

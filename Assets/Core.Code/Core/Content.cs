@@ -7,10 +7,3 @@ public class Content : ScriptableObject
 {
     public List<AbilityConfig> abilities;
 }
-
-[Serializable]
-public class AbilityConfig
-{
-    public int count;
-    public float cooldown;
-}
