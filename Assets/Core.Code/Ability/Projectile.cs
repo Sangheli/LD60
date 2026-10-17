@@ -24,4 +24,10 @@ public class Projectile : MonoBehaviour, IPoolable
         context.spawner.RemoveObject(gameObject, lifeTime);
         rb.AddForce(transform.forward * impulse);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        collision.gameObject.GetComponent<ICollision>().DoCollision();
+        context.spawner.RemoveObject(gameObject,0);
+    }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PrefabSpawner : MonoBehaviour
@@ -27,11 +28,20 @@ public class PrefabSpawner : MonoBehaviour
         
         if (timeOut > 0.0001)
         {
-            Destroy(view.gameObject,timeOut);    
+            StartCoroutine(AwaitDestroy(view, timeOut));
         }
         else
         {
             Destroy(view.gameObject);    
         }
+    }
+
+    IEnumerator AwaitDestroy(GameObject view, float time)
+    {
+        yield return new WaitForSeconds(time);
+        if(view == null)
+            yield break;
+        
+        Destroy(view);
     }
 }

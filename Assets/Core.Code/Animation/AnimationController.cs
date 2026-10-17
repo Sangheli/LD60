@@ -31,7 +31,7 @@ public class AnimatorController : MonoBehaviour
                 (
                 Random.Range(-settings.Shift, settings.Shift),
                 Random.Range(-settings.Shift, settings.Shift),
-                0
+                Random.Range(-settings.Shift, settings.Shift)
                 );
 
             view.localPosition = newPos;
@@ -136,6 +136,57 @@ public class AnimatorController : MonoBehaviour
             yield return new WaitForSeconds(settings.Time/settings.StepCount);
         }
 
+        _started[view] = null;
+    }
+    
+    public void PlayScaleWithEnd(Transform view, Vector3 startScale, AnimationSettings settings)
+    {
+        _started.TryAdd(view, null);
+        
+        if (_started[view] != null)
+        {
+            StopCoroutine(_started[view]);
+        }
+        
+        _started[view] = PlayScaleIEnumeratorWithEnd(view, startScale,settings);
+        StartCoroutine(_started[view]);
+    }
+    
+    IEnumerator PlayScaleIEnumeratorWithEnd(Transform view,  Vector3 startScale,AnimationSettings settings)
+    {
+        var currentTime = 0f;
+        int currentIndex = settings.GetStartShift();
+        int currentDirection = 1;
+        
+        while (currentTime<settings.Time)
+        {
+            var startTime = Time.time;
+            if (currentDirection > 0  && currentIndex >= settings.StepCount)
+            {
+                currentDirection = -1;
+                currentIndex = (int)settings.StepCount;
+            }
+            else if (currentDirection < 0 && currentIndex <= 0)
+            {
+                currentDirection = 1;
+                currentIndex = 0;
+            }
+                
+            var scale = startScale + 
+                        new Vector3
+                        (
+                            currentIndex*settings.Shift/settings.StepCount,
+                            currentIndex*settings.Shift/settings.StepCount,
+                            currentIndex*settings.Shift/settings.StepCount
+                        );
+
+            view.localScale = scale;
+            currentIndex+=currentDirection;
+            yield return new WaitForSeconds(settings.Time/settings.StepCount);
+            currentTime += Time.time - startTime;
+        }
+
+        view.localScale = startScale;
         _started[view] = null;
     }
 }
