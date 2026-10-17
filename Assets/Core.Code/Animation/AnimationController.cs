@@ -29,9 +29,9 @@ public class AnimatorController : MonoBehaviour
             var newPos = startPosition + 
                 new Vector3
                 (
-                Random.Range(-settings.Shift, settings.Shift),
-                Random.Range(-settings.Shift, settings.Shift),
-                Random.Range(-settings.Shift, settings.Shift)
+                Random.Range(-settings.Shift, settings.Shift)*settings.ShiftV3.x,
+                Random.Range(-settings.Shift, settings.Shift)*settings.ShiftV3.y,
+                Random.Range(-settings.Shift, settings.Shift)*settings.ShiftV3.z
                 );
 
             view.localPosition = newPos;

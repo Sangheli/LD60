@@ -3,6 +3,7 @@
 [CreateAssetMenu]
 public class AnimationSettings : ScriptableObject
 {
+    public Vector3 ShiftV3;
     public float Shift = 1f;
     public float Time = 1f;
     public float StepCount = 5;

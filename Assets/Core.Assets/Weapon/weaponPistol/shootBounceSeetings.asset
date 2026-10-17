@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56da766589544e86a9fe1f06d5d4eeb4, type: 3}
   m_Name: shootBounceSeetings
   m_EditorClassIdentifier: Assembly-CSharp::AnimationSettings
+  ShiftV3: {x: 0, y: 0, z: 5}
   Shift: 0.01
   Time: 0.1
   StepCount: 10

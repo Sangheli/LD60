@@ -6,8 +6,7 @@ public class Projectile : MonoBehaviour, IPoolable
 {
     public Context context;
     public Rigidbody rb;
-    public float lifeTime = 5;
-    public float impulse = 5;
+    public ProjectileConfig projectileConfig;
     
     private void Awake()
     {
@@ -21,8 +20,8 @@ public class Projectile : MonoBehaviour, IPoolable
 
     public void Init()
     {
-        context.spawner.RemoveObject(gameObject, lifeTime);
-        rb.AddForce(transform.forward * impulse);
+        context.spawner.RemoveObject(gameObject, projectileConfig.lifeTime);
+        rb.AddForce(transform.forward * projectileConfig.impulse);
     }
 
     private void OnCollisionEnter(Collision collision)

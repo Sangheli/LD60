@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56da766589544e86a9fe1f06d5d4eeb4, type: 3}
   m_Name: grassBounceSeetings
   m_EditorClassIdentifier: Assembly-CSharp::AnimationSettings
-  Shift: 0.1
+  Shift: 0.05
   Time: 0.1
   StepCount: 10
   useRandomStart: 0

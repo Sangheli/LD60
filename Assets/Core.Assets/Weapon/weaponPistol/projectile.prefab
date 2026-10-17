@@ -4918,8 +4918,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
   context: {fileID: 0}
   rb: {fileID: -7316878827423834418}
-  lifeTime: 5
-  impulse: 1000
+  projectileConfig: {fileID: 11400000, guid: 0b07fda94a0fe8d49b34bdc75699bdcc, type: 2}
 --- !u!54 &-7316878827423834418
 Rigidbody:
   m_ObjectHideFlags: 0
