@@ -27,6 +27,7 @@ public class Builder
         { "OSX",     new BuildParam { BuildTarget = BuildTarget.StandaloneOSX, Folder = "mac_build"} },
         { "Win64",   new BuildParam { BuildTarget = BuildTarget.StandaloneWindows64, Folder = "pc_build", Extension = ".exe" } },
         { "WebGL",   new BuildParam { BuildTarget = BuildTarget.WebGL, Folder = "webgl_build", UseName = false } },
+        { "IOS",     new BuildParam { BuildTarget = BuildTarget.iOS, Folder = "ios_build", UseName = false } },
     };
 
     private const string BuildTargetParam = "-buildTarget";
@@ -45,6 +46,9 @@ public class Builder
     
     [MenuItem("Build/Build Webgl")]
     public static void BuildWebgl() => BuildWithParam(BuildTarget.WebGL);
+    
+    [MenuItem("Build/Build IOS")]
+    public static void BuilIOS() => BuildWithParam(BuildTarget.iOS);
 
     public static void Build() => BuildWithParam(GetPlatform(Environment.GetCommandLineArgs()));
 
