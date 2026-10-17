@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-public class HyperCubeView : MonoBehaviour, ICollision
+public class HyperCubeView : MonoBehaviour, ICollision, IContextInject
 {
     public Context context;
     public HyperCubeData data;
@@ -15,6 +15,11 @@ public class HyperCubeView : MonoBehaviour, ICollision
     {
         RuntimeData.data = data;
         RuntimeData.Init();
+    }
+    
+    public void Inject(Context context)
+    {
+        this.context = context;
     }
 
     public void DoCollision()

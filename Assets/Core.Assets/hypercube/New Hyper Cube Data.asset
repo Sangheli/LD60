@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b372a7d5e8aa42c8a6b7bdba8068d52e, type: 3}
   m_Name: New Hyper Cube Data
   m_EditorClassIdentifier: Assembly-CSharp::HyperCubeData
-  coinToSpawnMin: 2
-  coinToSpawn: 5
+  coinToSpawnMin: 40
+  coinToSpawn: 50
   HP: 20
   spawnShift: {x: 2, y: 5, z: 2}
