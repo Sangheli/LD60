@@ -1,0 +1,51 @@
+﻿using System;
+using UnityEngine;
+
+public class HyperCubeView : MonoBehaviour, ICollision
+{
+    public Context context;
+    public HyperCubeData data;
+    public AnimationSettings animationSettings;
+    public Transform bounceViewTf;
+    public HyperCubeRuntimeData RuntimeData = new HyperCubeRuntimeData();
+    public CoinView coinPrefab;
+    
+    
+    private void Awake()
+    {
+        RuntimeData.data = data;
+        RuntimeData.Init();
+    }
+
+    public void DoCollision()
+    {
+        if(!RuntimeData.IsAlive())
+            return;
+        
+        context.animatorController.PlayBounce(bounceViewTf,Vector3.zero, animationSettings);
+        RuntimeData.DoDamage(1);
+
+        if (!RuntimeData.IsAlive())
+        {
+            SpawnCoins();
+            gameObject.SetActive(false);
+        }
+            
+    }
+
+    private void SpawnCoins()
+    {
+        var num = data.GetCoinToSpawn();
+        
+        for (var i = 0; i < num; i++)
+        {
+            var spawnPos = transform.position + new Vector3(
+                UnityEngine.Random.Range(-data.spawnShift.x, data.spawnShift.x),
+                UnityEngine.Random.Range(0, data.spawnShift.y),
+                UnityEngine.Random.Range(-data.spawnShift.z, data.spawnShift.z)
+            );
+
+            context.spawner.Add(coinPrefab.gameObject, spawnPos, Quaternion.identity);
+        }
+    }
+}
