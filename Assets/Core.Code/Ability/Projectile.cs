@@ -8,7 +8,7 @@ public class Projectile : MonoBehaviour, IPoolable
     public Rigidbody rb;
     public ProjectileConfig projectileConfig;
     
-    private void Awake()
+    private void OnValidate()
     {
         rb ??= GetComponent<Rigidbody>();
     }
