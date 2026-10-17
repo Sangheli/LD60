@@ -29,4 +29,10 @@ public class Projectile : MonoBehaviour, IPoolable
         collision.gameObject.GetComponent<ICollision>().DoCollision();
         context.spawner.RemoveObject(gameObject,0);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        other.gameObject.GetComponent<ICollision>().DoCollision();
+        context.spawner.RemoveObject(gameObject,0);
+    }
 }

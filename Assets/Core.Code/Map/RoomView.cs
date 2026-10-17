@@ -25,5 +25,27 @@ public class RoomView : MonoBehaviour
                 y.Inject(context);
             }
         }
+
+        for (var index = 0; index < doors.Count; index++)
+        {
+            var x = doors[index];
+            x.InjectRoom(this);
+            x.DoorType = index;
+        }
     }
+
+    public DoorView GetDoorRight() => doors[2];
+    public DoorView GetDoorLeft() => doors[3];
+    public DoorView GetDoorUp() => doors[0];
+    public DoorView GetDoorDown() => doors[1];
+
+    public RoomView GetNextRoom(DoorView doorView) =>
+        doorView.DoorType switch
+        {
+            0 => roomUp,
+            1 => roomDown,
+            2 => roomRight,
+            3 => roomLeft,
+            _ => null
+        };
 }

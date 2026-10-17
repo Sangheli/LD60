@@ -5,6 +5,9 @@ public class CoinCollector : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        other.gameObject.GetComponent<ICollectLoot>().DoCollect();
+        if (other.gameObject.TryGetComponent<ICollectLoot>(out var x))
+        {
+            x.DoCollect();
+        }
     }
 }

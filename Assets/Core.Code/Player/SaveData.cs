@@ -8,4 +8,5 @@ public class SaveData
     public bool isAlive = true;
 
     public RoomView currentRoom;
+    public DoorView currentDoor;
 }
