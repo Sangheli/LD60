@@ -52,8 +52,16 @@ public class PlayerView : MonoBehaviour
         doorTransit = null;
     }
 
+    public float collectVfxCoolDown = 0.15f;
+    public float timeToPlayVfx;
+    
+    
     public void PlayCoinPickup()
     {
+        if(Time.time<timeToPlayVfx)
+            return;
+
+        timeToPlayVfx = Time.time + collectVfxCoolDown;
         coinPickupVfx.Play();
     }
 }

@@ -8866,6 +8866,8 @@ MonoBehaviour:
   currentAbility: {fileID: 1386446231}
   moveTF: {fileID: 1635313970}
   coinPickupVfx: {fileID: 1798725075}
+  collectVfxCoolDown: 0.1
+  timeToPlayVfx: 0
 --- !u!1001 &1607750136
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10034,7 +10036,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5132403531062990113, guid: 8d10afdf2d2291048847a3e21182a58e, type: 3}
       propertyPath: ShapeModule.radius.value
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5132403531062990113, guid: 8d10afdf2d2291048847a3e21182a58e, type: 3}
       propertyPath: ShapeModule.radiusThickness
@@ -10042,7 +10044,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5132403531062990113, guid: 8d10afdf2d2291048847a3e21182a58e, type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 0.01
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 5132403531062990113, guid: 8d10afdf2d2291048847a3e21182a58e, type: 3}
       propertyPath: InitialModule.startSpeed.scalar
