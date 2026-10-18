@@ -18,7 +18,6 @@ public class MonsterView : MonoBehaviour, ICollision, IContextInject
     public List<Transform> waypoints;
 
     private int currentWaypoint = 0;
-    private int lastWaypoint = 0;
     public Vector3 direction;
     
     private void Awake()
@@ -40,20 +39,19 @@ public class MonsterView : MonoBehaviour, ICollision, IContextInject
 
     public void SelectNextWaypoint()
     {
-        lastWaypoint = currentWaypoint;
-        currentWaypoint++;
-        if (currentWaypoint >= waypoints.Count) currentWaypoint = 0;
+        var points = new List<int>();
+        for (var i = 0; i < waypoints.Count; i++) points.Add(i);
+        points.Remove(currentWaypoint);
+        currentWaypoint = points[UnityEngine.Random.Range(0, points.Count)];
         direction = (waypoints[currentWaypoint].position - transform.position).normalized;
+        transform.rotation = Quaternion.LookRotation(direction);
     }
     
     private void Update()
     {
         transform.position += direction * data.Speed * Time.deltaTime;
-        if (Vector3.Distance(transform.position, waypoints[currentWaypoint].position) < 0.5f)
-        {
+        if (Vector3.Distance(transform.position, waypoints[currentWaypoint].position) < 0.5f) 
             SelectNextWaypoint();
-            transform.rotation = waypoints[lastWaypoint].rotation;
-        }
     }
 
     public void DoCollision()
