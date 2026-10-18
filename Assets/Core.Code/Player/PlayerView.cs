@@ -13,6 +13,7 @@ public class PlayerView : MonoBehaviour
     public SaveData saveData;
     public AbilityView currentAbility;
     public Transform moveTF;
+    public ParticleSystem coinPickupVfx;
     
     private void Awake()
     {
@@ -49,5 +50,10 @@ public class PlayerView : MonoBehaviour
         yield return null;
         characterController.enabled = true;
         doorTransit = null;
+    }
+
+    public void PlayCoinPickup()
+    {
+        coinPickupVfx.Play();
     }
 }

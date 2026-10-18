@@ -41,5 +41,6 @@ public class CoinView : MonoBehaviour, IPoolable, ICollision, ICollectLoot
         rb.isKinematic = true;
         context.dataController.AddCoin(config.nominal);
         context.spawner.RemoveObject(gameObject,0.001f);
+        context.playerView.PlayCoinPickup();
     }
 }
