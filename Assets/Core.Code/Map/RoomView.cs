@@ -19,13 +19,12 @@ public class RoomView : MonoBehaviour
     public bool hideSpecial;
 
     public GameObject doorPortal;
+    public DungeonStar dungeonStar;
 
     public void OnRoomEnter()
     {
-        if (doorPortal != null)
-        {
-            doorPortal.SetActive(false);
-        }
+        if (doorPortal != null) doorPortal.SetActive(context.playerView.saveData.IsRoomCleared(this));
+        if (dungeonStar != null) dungeonStar.gameObject.SetActive(false);
     }
     
     private void Awake()
@@ -44,6 +43,12 @@ public class RoomView : MonoBehaviour
             var x = doors[index];
             x.InjectRoom(this);
             x.DoorType = index;
+        }
+
+        if (dungeonStar != null)
+        {
+            dungeonStar.context = context;
+            dungeonStar.room = this;
         }
     }
 
@@ -66,5 +71,10 @@ public class RoomView : MonoBehaviour
     {
         context.skyController.SetColor(skyColor,resetColor);
         context.toggleSpecialObjects.Toggle(!hideSpecial);
+    }
+
+    public void OnFinishBoss()
+    {
+        dungeonStar.gameObject.SetActive(true);
     }
 }

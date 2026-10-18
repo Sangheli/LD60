@@ -12,4 +12,13 @@ public class SaveData
     public bool useDoorRot;
     
     public int CollectedStars { get; set; } = 0;
+
+    public List<RoomView> clearedRoom = new List<RoomView>();
+    
+    public void AddClearedRoom(RoomView room)
+    {
+        clearedRoom.Add(room);
+    }
+
+    public bool IsRoomCleared(RoomView roomView) => clearedRoom.Contains(roomView);
 }
