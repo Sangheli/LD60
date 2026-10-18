@@ -17,6 +17,16 @@ public class RoomView : MonoBehaviour
     public bool resetColor = true;
     public Color skyColor;
     public bool hideSpecial;
+
+    public GameObject doorPortal;
+
+    public void OnRoomEnter()
+    {
+        if (doorPortal != null)
+        {
+            doorPortal.SetActive(false);
+        }
+    }
     
     private void Awake()
     {

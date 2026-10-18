@@ -9,5 +9,7 @@ public class SaveData
 
     public RoomView currentRoom;
     public DoorView currentDoor;
+    public bool useDoorRot;
+    
     public int CollectedStars { get; set; } = 0;
 }

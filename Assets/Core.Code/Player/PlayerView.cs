@@ -43,16 +43,18 @@ public class PlayerView : MonoBehaviour
 
     IEnumerator EnterRoomIE()
     {
+        saveData.currentRoom.OnRoomEnter();
         context.spawner.RemoveAll();
         saveData.currentRoom.SetSkyColor();
         characterController.enabled = false;
         var newPos = saveData.currentDoor.activeEnterPoint.position;
         newPos.y = moveTF.position.y;
         moveTF.position = newPos;
+        if (saveData.useDoorRot) moveTF.transform.rotation = saveData.currentDoor.activeEnterPoint.rotation;
         yield return null;
         characterController.enabled = true;
         doorTransit = null;
-
+        saveData.useDoorRot = false;
     }
 
     public float collectVfxCoolDown = 0.15f;
