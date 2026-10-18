@@ -9,4 +9,5 @@ public class SaveData
 
     public RoomView currentRoom;
     public DoorView currentDoor;
+    public int CollectedStars { get; set; } = 0;
 }
