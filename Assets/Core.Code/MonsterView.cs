@@ -19,6 +19,8 @@ public class MonsterView : MonoBehaviour, ICollision, IContextInject
 
     private int currentWaypoint = 0;
     public Vector3 direction;
+    public AbilityConfig config;
+    public Transform shootPoint;
     
     private void Awake()
     {
@@ -29,6 +31,7 @@ public class MonsterView : MonoBehaviour, ICollision, IContextInject
             context.animatorController.PlayFloatAnimation(bounceViewTf,Vector3.zero, animationSettingsJump);
         
         SelectNextWaypoint();
+        data1.config = config;
     }
     
     public void Inject(Context context)
@@ -52,6 +55,8 @@ public class MonsterView : MonoBehaviour, ICollision, IContextInject
         transform.position += direction * data.Speed * Time.deltaTime;
         if (Vector3.Distance(transform.position, waypoints[currentWaypoint].position) < 0.5f) 
             SelectNextWaypoint();
+        
+        Shoot();
     }
 
     public void DoCollision()
@@ -104,5 +109,26 @@ public class MonsterView : MonoBehaviour, ICollision, IContextInject
 
             context.spawner.Add(healPrefab.gameObject, spawnPos, Quaternion.identity);
         }
+    }
+    
+    public GameObject projectilePrefab;
+    private readonly AbilityRuntimeData data1 = new();
+    
+    public void Shoot()
+    {
+        if(config == null)
+            return;
+                
+        
+        if(!data1.CanShoot())
+            return;
+        
+        data1.UpdateShootTime();
+        context.spawner.Add
+        (
+            projectilePrefab, 
+            shootPoint.position, 
+            Quaternion.LookRotation(context.playerView.aimTf.position - transform.position).normalized
+        );
     }
 }

@@ -16,6 +16,7 @@ public class PlayerView : MonoBehaviour
     public ParticleSystem coinPickupVfx;
     public ParticleSystem healVfx;
     public ParticleSystem hurtVfx;
+    public Transform aimTf;
     
     private void Awake()
     {
