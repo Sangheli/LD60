@@ -16,6 +16,7 @@ public class RoomView : MonoBehaviour
 
     public bool resetColor = true;
     public Color skyColor;
+    public bool hideSpecial;
     
     private void Awake()
     {
@@ -54,5 +55,6 @@ public class RoomView : MonoBehaviour
     public void SetSkyColor()
     {
         context.skyController.SetColor(skyColor,resetColor);
+        context.toggleSpecialObjects.Toggle(!hideSpecial);
     }
 }
