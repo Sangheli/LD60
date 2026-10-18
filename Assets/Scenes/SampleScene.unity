@@ -24209,7 +24209,6 @@ MonoBehaviour:
   context: {fileID: 863280418}
   saveData:
     abilities: []
-    isAlive: 1
     currentRoom: {fileID: 1382816684}
     currentDoor: {fileID: 0}
     useDoorRot: 0
@@ -24638,6 +24637,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1635313981}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1635313987}
   m_SourcePrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
 --- !u!4 &1635313970 stripped
 Transform:
@@ -24701,6 +24703,19 @@ CharacterController:
   m_CorrespondingSourceObject: {fileID: 14300000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
   m_PrefabInstance: {fileID: 1635313969}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1635313987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571187022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ed8aaad593b42f69ada46b5c8c9e1df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerDamagerReciever
+  context: {fileID: 863280418}
 --- !u!1001 &1638786027
 PrefabInstance:
   m_ObjectHideFlags: 0

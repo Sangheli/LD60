@@ -27,5 +27,6 @@ public class Context : MonoBehaviour
     private void Start()
     {
         skyController.Init(camera);
+        playerView.saveData.Init();
     }
 }
