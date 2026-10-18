@@ -12,6 +12,8 @@ public class HyperCubeData : ScriptableObject
     public float HP = 20;
     public Vector3 spawnShift;
 
+    public float Speed = 5;
+
     public int GetCoinToSpawn() => (int)UnityEngine.Random.Range(coinToSpawnMin, coinToSpawn + 1);
 
     public int GetHealToSpawn() => (int)UnityEngine.Random.Range(healToSpawnMin, healToSpawnMax + 1);

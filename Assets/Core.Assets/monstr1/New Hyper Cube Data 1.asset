@@ -18,3 +18,4 @@ MonoBehaviour:
   healToSpawnMax: 5
   HP: 10
   spawnShift: {x: 2, y: 5, z: 2}
+  Speed: 5

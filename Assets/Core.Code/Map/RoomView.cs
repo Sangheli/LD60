@@ -21,6 +21,8 @@ public class RoomView : MonoBehaviour
     public GameObject doorPortal;
     public DungeonStar dungeonStar;
 
+    public List<GameObject> toHide;
+    
     public void OnRoomEnter()
     {
         if (doorPortal != null) doorPortal.SetActive(context.playerView.saveData.IsRoomCleared(this));
@@ -50,6 +52,8 @@ public class RoomView : MonoBehaviour
             dungeonStar.context = context;
             dungeonStar.room = this;
         }
+
+        foreach (var x in toHide) x.gameObject.SetActive(false);
     }
 
     public DoorView GetDoorRight() => doors[2];

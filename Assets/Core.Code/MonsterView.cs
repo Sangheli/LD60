@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class MonsterView : MonoBehaviour, ICollision, IContextInject
@@ -13,17 +14,46 @@ public class MonsterView : MonoBehaviour, ICollision, IContextInject
     public CoinView coinPrefab;
     public HealView healPrefab;
     public ParticleSystem vfx;
+
+    public List<Transform> waypoints;
+
+    private int currentWaypoint = 0;
+    private int lastWaypoint = 0;
+    public Vector3 direction;
     
     private void Awake()
     {
         RuntimeData.data = data;
         RuntimeData.Init();
+        
+        if (context!=null)
+            context.animatorController.PlayFloatAnimation(bounceViewTf,Vector3.zero, animationSettingsJump);
+        
+        SelectNextWaypoint();
     }
     
     public void Inject(Context context)
     {
         this.context = context;
         context.animatorController.PlayFloatAnimation(bounceViewTf,Vector3.zero, animationSettingsJump);
+    }
+
+    public void SelectNextWaypoint()
+    {
+        lastWaypoint = currentWaypoint;
+        currentWaypoint++;
+        if (currentWaypoint >= waypoints.Count) currentWaypoint = 0;
+        direction = (waypoints[currentWaypoint].position - transform.position).normalized;
+    }
+    
+    private void Update()
+    {
+        transform.position += direction * data.Speed * Time.deltaTime;
+        if (Vector3.Distance(transform.position, waypoints[currentWaypoint].position) < 0.5f)
+        {
+            SelectNextWaypoint();
+            transform.rotation = waypoints[lastWaypoint].rotation;
+        }
     }
 
     public void DoCollision()
