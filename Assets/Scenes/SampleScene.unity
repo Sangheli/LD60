@@ -21371,8 +21371,12 @@ MonoBehaviour:
   currentAbility: {fileID: 1386446231}
   moveTF: {fileID: 1635313970}
   coinPickupVfx: {fileID: 1798725075}
+  healVfx: {fileID: 1657941383}
+  hurtVfx: {fileID: 2026567172}
   collectVfxCoolDown: 0.1
   timeToPlayVfx: 0
+  timeToPlayVfxHeal: 0
+  timeToPlayVfxHurt: 0
 --- !u!1001 &1607750136
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22275,7 +22279,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5132403531062990113, guid: 8d10afdf2d2291048847a3e21182a58e, type: 3}
       propertyPath: ShapeModule.radius.value
-      value: 0.5
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 5132403531062990113, guid: 8d10afdf2d2291048847a3e21182a58e, type: 3}
       propertyPath: ShapeModule.radiusThickness
@@ -22287,11 +22291,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5132403531062990113, guid: 8d10afdf2d2291048847a3e21182a58e, type: 3}
       propertyPath: InitialModule.startSpeed.scalar
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5132403531062990113, guid: 8d10afdf2d2291048847a3e21182a58e, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 500
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 5132403531062990113, guid: 8d10afdf2d2291048847a3e21182a58e, type: 3}
       propertyPath: InitialModule.gravityModifier.scalar
@@ -22300,7 +22304,7 @@ PrefabInstance:
     - target: {fileID: 6807088888216219229, guid: 8d10afdf2d2291048847a3e21182a58e, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: -2432090755550338912, guid: f130e932fdf94a940b170ef06e17fe26, type: 3}
+      objectReference: {fileID: -2432090755550338912, guid: 8d951beac81951b4d91fb572ce4f7074, type: 3}
     - target: {fileID: 6807088888216219229, guid: 8d10afdf2d2291048847a3e21182a58e, type: 3}
       propertyPath: m_RenderMode
       value: 4
@@ -22308,7 +22312,7 @@ PrefabInstance:
     - target: {fileID: 6807088888216219229, guid: 8d10afdf2d2291048847a3e21182a58e, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: fe7f564b7520b6d41a20444f09d459e0, type: 2}
+      objectReference: {fileID: 2100000, guid: 8893e1446d16a624099b600321366dc4, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22317,6 +22321,11 @@ PrefabInstance:
 --- !u!4 &1657941381 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 133261630157474840, guid: 8d10afdf2d2291048847a3e21182a58e, type: 3}
+  m_PrefabInstance: {fileID: 1657941380}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1657941383 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5132403531062990113, guid: 8d10afdf2d2291048847a3e21182a58e, type: 3}
   m_PrefabInstance: {fileID: 1657941380}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1660970202 stripped
@@ -26279,7 +26288,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 133261630157474840, guid: 8d10afdf2d2291048847a3e21182a58e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.12
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 133261630157474840, guid: 8d10afdf2d2291048847a3e21182a58e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -26355,7 +26364,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5132403531062990113, guid: 8d10afdf2d2291048847a3e21182a58e, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 500
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 5132403531062990113, guid: 8d10afdf2d2291048847a3e21182a58e, type: 3}
       propertyPath: InitialModule.gravityModifier.scalar
@@ -26364,7 +26373,7 @@ PrefabInstance:
     - target: {fileID: 6807088888216219229, guid: 8d10afdf2d2291048847a3e21182a58e, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: -2432090755550338912, guid: f130e932fdf94a940b170ef06e17fe26, type: 3}
+      objectReference: {fileID: 4300002, guid: 103612e5e1ff43a4e896c567a2cb3ae1, type: 3}
     - target: {fileID: 6807088888216219229, guid: 8d10afdf2d2291048847a3e21182a58e, type: 3}
       propertyPath: m_RenderMode
       value: 4
@@ -26381,6 +26390,11 @@ PrefabInstance:
 --- !u!4 &2026567170 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 133261630157474840, guid: 8d10afdf2d2291048847a3e21182a58e, type: 3}
+  m_PrefabInstance: {fileID: 2026567169}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &2026567172 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5132403531062990113, guid: 8d10afdf2d2291048847a3e21182a58e, type: 3}
   m_PrefabInstance: {fileID: 2026567169}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2037277810

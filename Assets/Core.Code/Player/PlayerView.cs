@@ -14,6 +14,8 @@ public class PlayerView : MonoBehaviour
     public AbilityView currentAbility;
     public Transform moveTF;
     public ParticleSystem coinPickupVfx;
+    public ParticleSystem healVfx;
+    public ParticleSystem hurtVfx;
     
     private void Awake()
     {
@@ -59,6 +61,8 @@ public class PlayerView : MonoBehaviour
 
     public float collectVfxCoolDown = 0.15f;
     public float timeToPlayVfx;
+    public float timeToPlayVfxHeal;
+    public float timeToPlayVfxHurt;
     
     
     public void PlayCoinPickup()
@@ -68,5 +72,23 @@ public class PlayerView : MonoBehaviour
 
         timeToPlayVfx = Time.time + collectVfxCoolDown;
         coinPickupVfx.Play();
+    }
+    
+    public void PlayHeal()
+    {
+        if(Time.time<timeToPlayVfxHeal)
+            return;
+
+        timeToPlayVfxHeal = Time.time + collectVfxCoolDown;
+        healVfx.Play();
+    }
+    
+    public void PlayHurt()
+    {
+        if(Time.time<timeToPlayVfxHurt)
+            return;
+
+        timeToPlayVfxHurt = Time.time + collectVfxCoolDown;
+        hurtVfx.Play();
     }
 }

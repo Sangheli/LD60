@@ -6,4 +6,9 @@
     {
         totalCoin += configNominal;
     }
+    
+    public void AddHeal(float configNominal)
+    {
+        // totalCoin += configNominal;
+    }
 }
