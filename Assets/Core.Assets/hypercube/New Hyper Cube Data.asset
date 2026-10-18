@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HyperCubeData
   coinToSpawnMin: 40
   coinToSpawn: 50
-  HP: 20
+  healToSpawnMin: 1
+  healToSpawnMax: 5
+  HP: 30
   spawnShift: {x: 2, y: 5, z: 2}
