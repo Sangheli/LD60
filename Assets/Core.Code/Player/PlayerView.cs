@@ -43,6 +43,8 @@ public class PlayerView : MonoBehaviour
 
     IEnumerator EnterRoomIE()
     {
+        context.spawner.RemoveAll();
+        saveData.currentRoom.SetSkyColor();
         characterController.enabled = false;
         var newPos = saveData.currentDoor.activeEnterPoint.position;
         newPos.y = moveTF.position.y;
@@ -50,6 +52,7 @@ public class PlayerView : MonoBehaviour
         yield return null;
         characterController.enabled = true;
         doorTransit = null;
+
     }
 
     public float collectVfxCoolDown = 0.15f;

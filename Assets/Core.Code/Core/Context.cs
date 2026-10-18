@@ -1,4 +1,5 @@
 ﻿using System;
+using Core.Code;
 using UnityEngine;
 
 [RequireComponent(typeof(PrefabSpawner))]
@@ -11,10 +12,17 @@ public class Context : MonoBehaviour
     public DataController dataController = new DataController();
     public MapView mapView;
     public PlayerView playerView;
+    public SkyController skyController = new SkyController();
+    public Camera camera;
     
     private void OnValidate()
     {
         spawner ??= GetComponent<PrefabSpawner>();
         animatorController ??= GetComponent<AnimatorController>();
+    }
+
+    private void Start()
+    {
+        skyController.Init(camera);
     }
 }

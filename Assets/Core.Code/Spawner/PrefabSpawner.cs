@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class PrefabSpawner : MonoBehaviour
@@ -24,14 +26,13 @@ public class PrefabSpawner : MonoBehaviour
 
     public void RemoveObject(GameObject view, float timeOut)
     {
-        spawnedList.Remove(view);
-        
         if (timeOut > 0.0001)
         {
             StartCoroutine(AwaitDestroy(view, timeOut));
         }
         else
         {
+            spawnedList.Remove(view);
             Destroy(view.gameObject);    
         }
     }
@@ -42,6 +43,14 @@ public class PrefabSpawner : MonoBehaviour
         if(view == null)
             yield break;
         
+        spawnedList.Remove(view);
         Destroy(view);
+    }
+
+    public void RemoveAll()
+    {
+        var toDestroy = spawnedList.ToArray().ToList();
+        spawnedList.Clear();
+        foreach (var x in toDestroy) RemoveObject(x, 0);
     }
 }

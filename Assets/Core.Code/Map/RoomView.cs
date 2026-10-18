@@ -4,7 +4,6 @@ using UnityEngine;
 public class RoomView : MonoBehaviour
 {
     public Context context;
-    private RoomData _data;
     public List<DoorView> doors;
     
     public List<GameObject> toSearchOnAwake;
@@ -14,6 +13,9 @@ public class RoomView : MonoBehaviour
     public RoomView roomDown;
     public RoomView roomLeft;
     public RoomView roomRight;
+
+    public bool resetColor = true;
+    public Color skyColor;
     
     private void Awake()
     {
@@ -48,4 +50,9 @@ public class RoomView : MonoBehaviour
             3 => roomLeft,
             _ => null
         };
+
+    public void SetSkyColor()
+    {
+        context.skyController.SetColor(skyColor,resetColor);
+    }
 }
