@@ -43,7 +43,9 @@ public class PlayerView : MonoBehaviour
     IEnumerator EnterRoomIE()
     {
         characterController.enabled = false;
-        moveTF.position = saveData.currentDoor.activeEnterPoint.position;
+        var newPos = saveData.currentDoor.activeEnterPoint.position;
+        newPos.y = moveTF.position.y;
+        moveTF.position = newPos;
         yield return null;
         characterController.enabled = true;
         doorTransit = null;
