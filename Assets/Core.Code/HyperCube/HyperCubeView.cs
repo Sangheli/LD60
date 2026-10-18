@@ -9,7 +9,7 @@ public class HyperCubeView : MonoBehaviour, ICollision, IContextInject
     public Transform bounceViewTf;
     public HyperCubeRuntimeData RuntimeData = new HyperCubeRuntimeData();
     public CoinView coinPrefab;
-    
+    public ParticleSystem vfx;
     
     private void Awake()
     {
@@ -29,6 +29,9 @@ public class HyperCubeView : MonoBehaviour, ICollision, IContextInject
         
         context.animatorController.PlayBounce(bounceViewTf,Vector3.zero, animationSettings);
         RuntimeData.DoDamage(1);
+        
+        if (vfx!=null)
+            vfx.Play();
 
         if (!RuntimeData.IsAlive())
         {
